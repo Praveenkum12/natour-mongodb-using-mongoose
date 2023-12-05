@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const slugify = require('slugify');
 
 const tourSchema = new mongoose.Schema({
   name: {
@@ -52,6 +53,31 @@ const tourSchema = new mongoose.Schema({
     select: false,
   },
   startDates: [Date],
+  id: {
+    type: Number,
+    select: false,
+  },
+  secretTour: {
+    type: Boolean,
+    default: false,
+  },
+});
+
+// document middleware
+tourSchema.pre('save', function (next) {
+  this.slug = slugify(this.name, { lower: true });
+  next();
+});
+
+// query middleware
+tourSchema.pre(/^find/, function (next) {
+  this.find({ secretTour: { $ne: true } });
+  next();
+});
+
+tourSchema.post(/^find/, function (docs, next) {
+  // console.log(docs);
+  next();
 });
 
 module.exports = mongoose.model('TOUR', tourSchema);

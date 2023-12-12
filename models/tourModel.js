@@ -7,6 +7,8 @@ const tourSchema = new mongoose.Schema({
     required: [true, 'A tour must have name'],
     unique: true,
     trim: true,
+    minlength: [10, 'A name must be greater than or equal to 10'],
+    maxlength: [40, 'A name must be less than or equal to 40'],
   },
   duration: {
     type: Number,
@@ -18,10 +20,18 @@ const tourSchema = new mongoose.Schema({
   },
   difficulty: {
     type: String,
+    trim: true,
+    enum: {
+      values: ['easy', 'medium', 'difficult'],
+      message:
+        'The difficulty should be one of these: easy, medium or difficult',
+    },
     required: [true, 'A tour must have a diffculty'],
   },
   ratingsAverage: {
     type: Number,
+    min: [1.0, 'The rating must be above 1.0'],
+    max: [5.0, 'The rating must be below 5.0'],
     default: 4.5,
   },
   ratingsQuantity: {
@@ -30,9 +40,18 @@ const tourSchema = new mongoose.Schema({
   },
   price: {
     type: Number,
+    trim: true,
     required: [true, 'A tour must have pricing'],
   },
-  priceDiscount: Number,
+  priceDiscount: {
+    type: Number,
+    validate: {
+      validator: function (val) {
+        return val < this.price;
+      },
+      message: 'The discount price should be less than regular price',
+    },
+  },
   summary: {
     type: String,
     trim: true,
@@ -75,8 +94,8 @@ tourSchema.pre(/^find/, function (next) {
   next();
 });
 
-tourSchema.post(/^find/, function (docs, next) {
-  // console.log(docs);
+tourSchema.pre('aggregate', function (next) {
+  this.pipeline().unshift({ $match: { secretTour: { $ne: true } } });
   next();
 });
 

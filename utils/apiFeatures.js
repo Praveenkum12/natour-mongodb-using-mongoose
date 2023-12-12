@@ -1,46 +1,53 @@
-const Tour = require('./../models/tourModel');
-
-function apiFeatures(reqQuery) {
-  const queryObj = { ...reqQuery };
-  // 1A) Filtering
-  const excludeFields = ['fields', 'page', 'sort', 'limit'];
-  excludeFields.forEach((el) => delete queryObj[el]);
-  //  1B) Adv. Filtering
-  let queryStr = JSON.stringify(queryObj);
-  queryStr = queryStr.replace(/\b(lt|lte|gt|gte)\b/g, (match) => `$${match}`);
-  const obj = JSON.parse(queryStr);
-  let query = Tour.find();
-  console.log('Query' + query);
-  // find({rating: {$lt: 3}})
-
-  // 2) Sorting
-  if (reqQuery.sort) {
-    const sortBy = reqQuery.sort.split(',').join(' ');
-    query = query.sort(sortBy);
-    // sort(price avereageRating)
-  } else {
-    query = query.sort('-createdAt');
+class APIFeatures {
+  constructor(query, queryString) {
+    this.query = query;
+    this.queryString = queryString;
   }
 
-  // 3) Field limiting
-  if (reqQuery.fields) {
-    query = query.select(reqQuery.fields.split(',').join(' '));
-    // select(price averageRating)
-  } else {
-    query = query.select('-__v');
+  filter() {
+    const queryObj = { ...this.queryString };
+    const excludedFields = ['page', 'sort', 'limit', 'fields'];
+    excludedFields.forEach((el) => delete queryObj[el]);
+
+    // 1B) Advanced filtering
+    let queryStr = JSON.stringify(queryObj);
+    queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`);
+
+    this.query = this.query.find(JSON.parse(queryStr));
+
+    return this;
   }
 
-  //  4) Pagination
-  const page = Number(reqQuery.page) || 1;
-  const limit = Number(reqQuery.limit) || 100;
-  const skip = (page - 1) * limit;
+  sort() {
+    if (this.queryString.sort) {
+      const sortBy = this.queryString.sort.split(',').join(' ');
+      this.query = this.query.sort(sortBy);
+    } else {
+      this.query = this.query.sort('-createdAt');
+    }
 
-  if (skip >= page) {
-    query = query.skip(skip).limit(limit);
+    return this;
   }
-  console.log(query);
 
-  return query;
+  limitFields() {
+    if (this.queryString.fields) {
+      const fields = this.queryString.fields.split(',').join(' ');
+      this.query = this.query.select(fields);
+    } else {
+      this.query = this.query.select('-__v');
+    }
+
+    return this;
+  }
+
+  paginate() {
+    const page = this.queryString.page * 1 || 1;
+    const limit = this.queryString.limit * 1 || 100;
+    const skip = (page - 1) * limit;
+
+    this.query = this.query.skip(skip).limit(limit);
+
+    return this;
+  }
 }
-
-module.exports = apiFeatures;
+module.exports = APIFeatures;

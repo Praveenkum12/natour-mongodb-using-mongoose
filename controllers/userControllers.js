@@ -1,7 +1,54 @@
+const multer = require('multer');
+const sharp = require('sharp');
 const User = require('./../models/userModel');
 const catchAsync = require('./../utils/catchAsync');
 const AppError = require('./../utils/appError');
 const { deleteOne, updateOne, getAll, getOne } = require('./handlerFactory');
+
+// cb --- call-back function
+// How we want to storage the file
+// const multerStorage = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, 'public/img/users');
+//   },
+//   filename: function (req, file, cb) {
+//     const ext = file.mimetype.split('/')[1];
+//     // user-(user-id)-(time-stamp).jpeg
+//     cb(null, `user-${req.user.id}-${Date.now()}.${ext}`);
+//   },
+// });
+
+const multerStorage = multer.memoryStorage();
+
+const multerFilter = function (req, file, cb) {
+  if (file.mimetype.startsWith('image')) {
+    cb(null, true);
+  } else {
+    // for error
+    cb(new AppError('Not an image! Please upload only images.', 400), false);
+  }
+};
+
+const upload = multer({
+  storage: multerStorage,
+  fileFilter: multerFilter,
+});
+
+exports.uploadUserPhoto = upload.single('photo');
+
+exports.resizeUserPhoto = catchAsync(async function (req, res, next) {
+  if (!req.file) return next();
+
+  req.file.filename = `user-${req.user.id}-${Date.now().jpeg}`;
+
+  await sharp(req.file.buffer)
+    .resize(500, 500)
+    .toFormat('jpeg')
+    .jpeg({ quality: 90 })
+    .toFile(`public/img/users/${req.file.filename}`);
+
+  next();
+});
 
 const filterObj = function (obj, ...strs) {
   const newObj = {};
@@ -22,6 +69,8 @@ exports.getMeAddParam = function (req, res, next) {
 exports.getMe = getOne(User);
 
 exports.updateMe = catchAsync(async function (req, res, next) {
+  // console.log(req.file);
+
   // 1) restict that user not to update password in this route
   if (req.body.password || req.body.passwordConfirm) {
     return next(
@@ -32,14 +81,15 @@ exports.updateMe = catchAsync(async function (req, res, next) {
   }
 
   const filteredBody = filterObj(req.body, 'name', 'email');
+  if (req.file) {
+    filteredBody.photo = req.file.filename;
+  }
 
   // 2) Update the document
   const updatedUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
     new: true,
     runValidators: true,
   });
-
-  console.log(filteredBody);
 
   res.status(200).json({
     status: 'success',

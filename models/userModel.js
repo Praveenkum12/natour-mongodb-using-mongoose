@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: [true, 'Please tell us your name'],
+      required: [true, 'Pllease enter your name'],
     },
     email: {
       type: String,
@@ -18,6 +18,7 @@ const userSchema = new mongoose.Schema(
     },
     photo: {
       type: String,
+      default: 'default.jpg',
     },
     role: {
       type: String,
@@ -98,7 +99,6 @@ userSchema.methods.passwordChangedAfter = function (JWTTimeStamp) {
 
 userSchema.methods.createPasswordResetToken = function () {
   const resetToken = crypto.randomBytes(32).toString('hex');
-
   this.passwordResetToken = crypto
     .createHash('sha256')
     .update(resetToken)

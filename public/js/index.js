@@ -3,6 +3,7 @@ import { login } from './logIn';
 import { logout } from './logout';
 import { updateSetting } from './updateSettings';
 import { bookTour } from './stripe';
+import { signup } from './signup';
 
 document.querySelector('.form-login')?.addEventListener('submit', function (e) {
   e.preventDefault();
@@ -10,6 +11,17 @@ document.querySelector('.form-login')?.addEventListener('submit', function (e) {
   const password = document.querySelector('#password').value;
   login(email, password);
 });
+
+document
+  .querySelector('.form-signup')
+  ?.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const username = document.querySelector('#username').value;
+    const email = document.querySelector('#email').value;
+    const password = document.querySelector('#password').value;
+    const confirmPassword = document.querySelector('#confirm-password').value;
+    signup(username, email, password, confirmPassword);
+  });
 
 document.querySelector('#log-out')?.addEventListener('click', function () {
   logout();

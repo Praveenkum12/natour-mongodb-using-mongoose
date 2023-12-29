@@ -580,11 +580,20 @@ var _logIn = require("./logIn");
 var _logout = require("./logout");
 var _updateSettings = require("./updateSettings");
 var _stripe = require("./stripe");
+var _signup = require("./signup");
 document.querySelector(".form-login")?.addEventListener("submit", function(e) {
     e.preventDefault();
     const email = document.querySelector("#email").value;
     const password = document.querySelector("#password").value;
     (0, _logIn.login)(email, password);
+});
+document.querySelector(".form-signup")?.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const username = document.querySelector("#username").value;
+    const email = document.querySelector("#email").value;
+    const password = document.querySelector("#password").value;
+    const confirmPassword = document.querySelector("#confirm-password").value;
+    (0, _signup.signup)(username, email, password, confirmPassword);
 });
 document.querySelector("#log-out")?.addEventListener("click", function() {
     (0, _logout.logout)();
@@ -620,7 +629,7 @@ document.getElementById("book-tour")?.addEventListener("click", function(e) {
     (0, _stripe.bookTour)(tourId);
 });
 
-},{"./logIn":"ALWe3","./logout":"1ftRF","./updateSettings":"l3cGY","./stripe":"10tSC"}],"ALWe3":[function(require,module,exports) {
+},{"./logIn":"ALWe3","./logout":"1ftRF","./updateSettings":"l3cGY","./stripe":"10tSC","./signup":"fNY2o"}],"ALWe3":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "login", ()=>login);
@@ -5120,6 +5129,36 @@ const bookTour = async (tourId)=>{
     }
 };
 
-},{"axios":"jo6P5","./alert":"kxdiQ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["dafvh","f2QDv"], "f2QDv", "parcelRequire1248")
+},{"axios":"jo6P5","./alert":"kxdiQ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fNY2o":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "signup", ()=>signup);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _alert = require("./alert");
+const signup = async function(name, email, password, passwordConfirm) {
+    try {
+        const res = await (0, _axiosDefault.default)({
+            method: "POST",
+            url: "/api/v1/users/signup",
+            data: {
+                name,
+                email,
+                password,
+                passwordConfirm
+            }
+        });
+        if (res.data.status === "success") {
+            (0, _alert.showAlert)("success", "Sign up succcessfully!!");
+            window.setTimeout(function() {
+                location.assign("/");
+            }, 100);
+        }
+    } catch (err) {
+        (0, _alert.showAlert)("error", err.response.data.message);
+    }
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","axios":"jo6P5","./alert":"kxdiQ"}]},["dafvh","f2QDv"], "f2QDv", "parcelRequire1248")
 
 //# sourceMappingURL=index.js.map

@@ -12,24 +12,25 @@ module.exports = class Email {
 
   newTransport() {
     if (process.env.NODE_ENV === 'production') {
-      // Sendgrid
       return nodemailer.createTransport({
-        service: 'SendGrid',
+        host: process.env.RESEND_HOST,
+        secure: true,
+        port: process.env.RESEND_PORT,
         auth: {
-          user: process.env.SENDGRID_USERNAME,
-          pass: process.env.SENDGRID_PASSWORD,
+          user: process.env.RESEND_USERNAME,
+          pass: process.env.RESEND_PASSWORD,
+        },
+      });
+    } else {
+      return nodemailer.createTransport({
+        host: process.env.EMAIL_HOST,
+        port: process.env.EMAIL_PORT,
+        auth: {
+          user: process.env.EMAIL_USERNAME,
+          pass: process.env.EMAIL_PASSWORD,
         },
       });
     }
-
-    return nodemailer.createTransport({
-      host: process.env.EMAIL_HOST,
-      port: process.env.EMAIL_PORT,
-      auth: {
-        user: process.env.EMAIL_USERNAME,
-        pass: process.env.EMAIL_PASSWORD,
-      },
-    });
   }
 
   // Send the actual email

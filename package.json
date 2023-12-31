@@ -7,7 +7,8 @@
     "main": false
   },
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "start:prod": "set NODE_ENV=production& nodemon server.js",
     "ndb": "ndb serve.js",
     "watch:js": "parcel serve ./public/js/index.js --dist-dir ./public/js/bundled",
@@ -43,20 +44,19 @@
     "xss-clean": "^0.1.4"
   },
   "devDependencies": {
-    "buffer": "^6.0.3",
-    "eslint": "^8.34.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-node": "^4.1.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "parcel": "^2.10.3",
-    "parcel-bundler": "^1.12.5",
-    "prettier": "^2.8.4"
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "parcel": "^2.8.2",
+    "prettier": "^2.8.1"
   },
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=12.0.0"
   }
 }

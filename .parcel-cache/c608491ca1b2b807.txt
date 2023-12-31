@@ -8,7 +8,7 @@
 64C:\Users\Praveen\Desktop\natour\node_modules\through\.travis.yml133461405280026607 0
 97C:\Users\Praveen\Desktop\natour\node_modules\expand-brackets\node_modules\extend-shallow\index.js133477250806744492 0
 54C:\Users\Praveen\Desktop\natour\node_modules\urix\test133477250841502115 1
-42C:\Users\Praveen\Desktop\natour\.gitignore133482391406273121 0
+42C:\Users\Praveen\Desktop\natour\.gitignore133483293570334468 0
 93C:\Users\Praveen\Desktop\natour\node_modules\rxjs\_esm2015\internal\operators\bufferToggle.js133461405544881266 0
 65C:\Users\Praveen\Desktop\natour\node_modules\lodash\fp\valueOf.js133461405687341075 0
 90C:\Users\Praveen\Desktop\natour\node_modules\rxjs\_esm2015\internal\util\EmptyError.js.map133461405711582688 0
@@ -27,7 +27,7 @@
 68C:\Users\Praveen\Desktop\natour\node_modules\lodash\_baseToString.js133461405542783830 0
 85C:\Users\Praveen\Desktop\natour\node_modules\es-abstract\helpers\defaultEndianness.js133461405610338541 0
 75C:\Users\Praveen\Desktop\natour\node_modules\diffie-hellman\lib\primes.json133477250905708263 0
-49C:\Users\Praveen\Desktop\natour\package-lock.json133483287362656754 0
+49C:\Users\Praveen\Desktop\natour\package-lock.json133485069261125231 0
 125C:\Users\Praveen\Desktop\natour\node_modules\parcel-bundler\node_modules\stylehacks\node_modules\postcss-selector-parser\dist133477250993892221 1
 60C:\Users\Praveen\Desktop\natour\public\img\users\user-14.jpg133455269769864567 0
 79C:\Users\Praveen\Desktop\natour\node_modules\functions-have-names\.editorconfig133461405239787805 0
@@ -125,7 +125,7 @@
 63C:\Users\Praveen\Desktop\natour\node_modules\type-is\HISTORY.md133482396938808010 0
 86C:\Users\Praveen\Desktop\natour\node_modules\rxjs\src\internal\observable\partition.ts133461405776254933 0
 126C:\Users\Praveen\Desktop\natour\node_modules\parcel-bundler\node_modules\htmlnano\node_modules\posthtml-parser\.clintonrc.json133477250904442931 0
-38C:\Users\Praveen\Desktop\natour\app.js133483288364958732 0
+38C:\Users\Praveen\Desktop\natour\app.js133485030254437198 0
 87C:\Users\Praveen\Desktop\natour\node_modules\core-js\library\modules\_string-context.js133477245411626143 0
 62C:\Users\Praveen\Desktop\natour\node_modules\browserify-cipher133477250854472199 1
 61C:\Users\Praveen\Desktop\natour\node_modules\htmlnano\test.js133477414135917540 0
@@ -216,11 +216,11 @@
 80C:\Users\Praveen\Desktop\natour\node_modules\rxjs\operators\sequenceEqual.js.map133461405733244791 0
 93C:\Users\Praveen\Desktop\natour\node_modules\external-editor\main\errors\CreateFileError.d.ts133461405347671261 0
 107C:\Users\Praveen\Desktop\natour\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\generator133477414157147319 1
-44C:\Users\Praveen\Desktop\natour\node_modules133483287325219946 1
+44C:\Users\Praveen\Desktop\natour\node_modules133485069227432757 1
 78C:\Users\Praveen\Desktop\natour\node_modules\@nodelib\fs.scandir\out\providers133461405440135432 1
 93C:\Users\Praveen\Desktop\natour\node_modules\regenerate-unicode-properties\Script\Ol_Chiki.js133477251138495200 0
 94C:\Users\Praveen\Desktop\natour\node_modules\aria-query\lib\etc\roles\literal\paragraphRole.js133461405541871861 0
-63C:\Users\Praveen\Desktop\natour\node_modules\.package-lock.json133483287384405937 0
+63C:\Users\Praveen\Desktop\natour\node_modules\.package-lock.json133485069290604090 0
 99C:\Users\Praveen\Desktop\natour\node_modules\eslint\lib\cli-engine\formatters\json-with-metadata.js133461405559735234 0
 87C:\Users\Praveen\Desktop\natour\node_modules\@parcel\transformer-react-refresh-wrap\lib133477414072408746 1
 71C:\Users\Praveen\Desktop\natour\node_modules\rxjs\operator\auditTime.js133461405526642897 0
@@ -263,7 +263,7 @@
 91C:\Users\Praveen\Desktop\natour\node_modules\parcel-bundler\node_modules\htmlnano\README.md133477251026537476 0
 60C:\Users\Praveen\Desktop\natour\node_modules\sshpk\README.md133477251040548623 0
 110C:\Users\Praveen\Desktop\natour\node_modules\eslint-config-node\node_modules\eslint\lib\rules\padded-blocks.js133461405606897988 0
-44C:\Users\Praveen\Desktop\natour\package.json133483292644354554 0
+44C:\Users\Praveen\Desktop\natour\package.json133483293284043872 0
 90C:\Users\Praveen\Desktop\natour\node_modules\rxjs\src\internal\operators\defaultIfEmpty.ts133461405755491044 0
 56C:\Users\Praveen\Desktop\natour\node_modules\is-callable133461405389654296 1
 67C:\Users\Praveen\Desktop\natour\node_modules\strip-bom\package.json133461405239497788 0
@@ -291,7 +291,7 @@
 72C:\Users\Praveen\Desktop\natour\node_modules\mongoose\lib\helpers\cursor133482397116301786 1
 59C:\Users\Praveen\Desktop\natour\node_modules\lodash\thru.js133461405680668983 0
 95C:\Users\Praveen\Desktop\natour\node_modules\rxjs\_esm2015\internal\operators\windowTime.js.map133461405743692437 0
-62C:\Users\Praveen\Desktop\natour\public\js\bundled\index.js.map133483292957751084 0
+62C:\Users\Praveen\Desktop\natour\public\js\bundled\index.js.map133485034914790081 0
 90C:\Users\Praveen\Desktop\natour\node_modules\rxjs\_esm5\internal\operators\throwIfEmpty.js133461405690636763 0
 67C:\Users\Praveen\Desktop\natour\node_modules\node-forge\lib\sha1.js133477251078148790 0
 70C:\Users\Praveen\Desktop\natour\node_modules\nodemailer\.prettierrc.js133469252574340985 0
@@ -455,7 +455,7 @@
 67C:\Users\Praveen\Desktop\natour\node_modules\eslint-plugin-prettier133461405355024237 1
 95C:\Users\Praveen\Desktop\natour\node_modules\tsconfig-paths\src\__tests__\mapping-entry.test.ts133461405520042266 0
 103C:\Users\Praveen\Desktop\natour\node_modules\jsx-ast-utils\lib\values\expressions\FunctionExpression.js133461405452449526 0
-46C:\Users\Praveen\Desktop\natour\views\base.pug133477497129885064 0
+46C:\Users\Praveen\Desktop\natour\views\base.pug133485025916382979 0
 97C:\Users\Praveen\Desktop\natour\node_modules\parcel-bundler\node_modules\postcss\lib\processor.js133477250979397010 0
 89C:\Users\Praveen\Desktop\natour\node_modules\request\node_modules\uuid\lib\rng-browser.js133477250870021900 0
 88C:\Users\Praveen\Desktop\natour\node_modules\@ampproject\remapping\dist\remapping.umd.js133477250760373977 0
@@ -684,7 +684,7 @@
 98C:\Users\Praveen\Desktop\natour\node_modules\caniuse-lite\data\features\css-repeating-gradients.js133477244881533393 0
 66C:\Users\Praveen\Desktop\natour\node_modules\lodash\reduceRight.js133461405662598341 0
 81C:\Users\Praveen\Desktop\natour\node_modules\compression\node_modules\safe-buffer133483287280562046 1
-41C:\Users\Praveen\Desktop\natour\public\js133483180738175666 1
+41C:\Users\Praveen\Desktop\natour\public\js133485033290677139 1
 66C:\Users\Praveen\Desktop\natour\node_modules\rxjs\src\Scheduler.ts133461405783438701 0
 67C:\Users\Praveen\Desktop\natour\node_modules\undici-types\README.md133482396938466807 0
 112C:\Users\Praveen\Desktop\natour\node_modules\@selderee\plugin-htmlparser2\node_modules\domhandler\lib\index.d.ts133480867184327392 0
@@ -712,13 +712,13 @@
 75C:\Users\Praveen\Desktop\natour\node_modules\eslint\lib\rules\no-eq-null.js133461405585545093 0
 76C:\Users\Praveen\Desktop\natour\node_modules\rxjs\src\operators\observeOn.ts133461405774988768 0
 71C:\Users\Praveen\Desktop\natour\node_modules\es-abstract\2020\Invoke.js133461405655187952 0
-49C:\Users\Praveen\Desktop\natour\public\js\bundled133483292957751084 1
+49C:\Users\Praveen\Desktop\natour\public\js\bundled133485034914830086 1
 88C:\Users\Praveen\Desktop\natour\node_modules\es-abstract\5\AbstractEqualityComparison.js133461405470375884 0
 99C:\Users\Praveen\Desktop\natour\public\img\tours\tour-658ac453afd71a51ec19d7b9-1703597063609-2.jpeg133480706636140000 0
 88C:\Users\Praveen\Desktop\natour\node_modules\rxjs\_esm5\internal\observable\never.js.map133461405725384540 0
 85C:\Users\Praveen\Desktop\natour\node_modules\rxjs\_esm5\internal\symbol\observable.js133461405651847866 0
 70C:\Users\Praveen\Desktop\natour\node_modules\asn1.js\lib\asn1\encoders133477250962865536 1
-50C:\Users\Praveen\Desktop\natour\public\js\index.js133483195040472277 0
+50C:\Users\Praveen\Desktop\natour\public\js\index.js133485033720619614 0
 77C:\Users\Praveen\Desktop\natour\node_modules\mongodb\src\operations\rename.ts133482397188416639 0
 89C:\Users\Praveen\Desktop\natour\node_modules\unicode-match-property-value-ecmascript\data133477250749438579 1
 70C:\Users\Praveen\Desktop\natour\node_modules\vm-browserify\.travis.yml133477250936474362 0
@@ -771,7 +771,7 @@
 79C:\Users\Praveen\Desktop\natour\node_modules\json-schema-traverse\.eslintrc.yml133461405263149350 0
 88C:\Users\Praveen\Desktop\natour\node_modules\rxjs\internal\operators\ignoreElements.d.ts133461405766137622 0
 68C:\Users\Praveen\Desktop\natour\node_modules\sprintf-js\gruntfile.js133461405334450989 0
-58C:\Users\Praveen\Desktop\natour\public\js\bundled\index.js133483292957600807 0
+58C:\Users\Praveen\Desktop\natour\public\js\bundled\index.js133485034914343618 0
 68C:\Users\Praveen\Desktop\natour\node_modules\rxjs\operators\max.d.ts133461405770861403 0
 76C:\Users\Praveen\Desktop\natour\node_modules\caniuse-lite\data\regions\TR.js133477244975315055 0
 88C:\Users\Praveen\Desktop\natour\node_modules\core-js\library\modules\es6.regexp.split.js133477245440276348 0
@@ -1194,7 +1194,7 @@
 80C:\Users\Praveen\Desktop\natour\node_modules\static-module\test\assign\source.js133477250957578670 0
 97C:\Users\Praveen\Desktop\natour\node_modules\googleapis\build\src\apis\mybusinesslodging\index.js133476510446024014 0
 59C:\Users\Praveen\Desktop\natour\node_modules\rxjs\webSocket133461405766807668 1
-62C:\Users\Praveen\Desktop\natour\node_modules\@msgpackr-extract133483287323932100 1
+62C:\Users\Praveen\Desktop\natour\node_modules\@msgpackr-extract133485069226927538 1
 76C:\Users\Praveen\Desktop\natour\node_modules\mongodb\lib\cmap\auth\gssapi.js133482397111975203 0
 82C:\Users\Praveen\Desktop\natour\node_modules\serialize-to-js\lib\internal\utils.js133477250861559396 0
 104C:\Users\Praveen\Desktop\natour\node_modules\cssnano-util-raw-cache\node_modules\postcss\lib\tokenize.js133477251009076662 0
@@ -1624,7 +1624,7 @@
 77C:\Users\Praveen\Desktop\natour\node_modules\es-abstract\2017\IteratorStep.js133461405681644178 0
 89C:\Users\Praveen\Desktop\natour\node_modules\rxjs\_esm5\internal\operators\endWith.js.map133461405711832708 0
 63C:\Users\Praveen\Desktop\natour\node_modules\css-tree\lib\utils133477414199440014 1
-52C:\Users\Praveen\Desktop\natour\node_modules\@emnapi133483287325219946 1
+52C:\Users\Praveen\Desktop\natour\node_modules\@emnapi133485069227492782 1
 87C:\Users\Praveen\Desktop\natour\node_modules\svgo\plugins\removeAttributesBySelector.js133477414153196586 0
 65C:\Users\Praveen\Desktop\natour\node_modules\lodash\_baseUnary.js133461405544231216 0
 82C:\Users\Praveen\Desktop\natour\node_modules\jsdom\node_modules\acorn\CHANGELOG.md133477250987739956 0
@@ -1686,7 +1686,7 @@
 93C:\Users\Praveen\Desktop\natour\node_modules\caniuse-lite\data\features\css-color-function.js133477244855092166 0
 51C:\Users\Praveen\Desktop\natour\node_modules\@iarna133477250570954724 1
 70C:\Users\Praveen\Desktop\natour\node_modules\eslint\lib\rules\curly.js133461405517661732 0
-49C:\Users\Praveen\Desktop\natour\node_modules\@img133483287324092150 1
+49C:\Users\Praveen\Desktop\natour\node_modules\@img133485069226957540 1
 85C:\Users\Praveen\Desktop\natour\node_modules\cssnano-util-get-arguments\dist\index.js133477250828102308 0
 109C:\Users\Praveen\Desktop\natour\node_modules\parcel-bundler\node_modules\css-tree\lib\syntax\node\HexColor.js133477251077968622 0
 72C:\Users\Praveen\Desktop\natour\node_modules\rxjs\util\isObservable.d.ts133461405768905230 0
@@ -1699,7 +1699,7 @@
 56C:\Users\Praveen\Desktop\natour\node_modules\@jridgewell133477250571024779 1
 101C:\Users\Praveen\Desktop\natour\node_modules\html-to-text\node_modules\htmlparser2\lib\index.d.ts.map133480867185301588 0
 92C:\Users\Praveen\Desktop\natour\node_modules\regenerate-unicode-properties\Script\Braille.js133477251039693216 0
-50C:\Users\Praveen\Desktop\natour\node_modules\@lmdb133483287324012143 1
+50C:\Users\Praveen\Desktop\natour\node_modules\@lmdb133485069226957540 1
 96C:\Users\Praveen\Desktop\natour\node_modules\@babel\helper-define-polyfill-provider\lib\types.js133477250971974010 0
 94C:\Users\Praveen\Desktop\natour\node_modules\rxjs\_esm5\internal\operators\bufferToggle.js.map133461405702592594 0
 108C:\Users\Praveen\Desktop\natour\node_modules\uncss\node_modules\postcss-selector-parser\dist\__tests__\id.js133477250963660880 0
@@ -1733,7 +1733,7 @@
 92C:\Users\Praveen\Desktop\natour\node_modules\tsconfig-paths\src\__tests__\filesystem.test.ts133461405519737124 0
 85C:\Users\Praveen\Desktop\natour\node_modules\rxjs\_esm5\internal\operators\groupBy.js133461405610458561 0
 94C:\Users\Praveen\Desktop\natour\node_modules\es-abstract\2023\OrdinaryCreateFromConstructor.js133461405693174929 0
-52C:\Users\Praveen\Desktop\natour\node_modules\@parcel133483287323932100 1
+52C:\Users\Praveen\Desktop\natour\node_modules\@parcel133485069227157600 1
 50C:\Users\Praveen\Desktop\natour\node_modules\@pkgr133459104080841839 1
 77C:\Users\Praveen\Desktop\natour\node_modules\rxjs\internal\operators\index.js133461405628007009 0
 78C:\Users\Praveen\Desktop\natour\node_modules\whatwg-url\lib\URLSearchParams.js133482396995727878 0
@@ -1781,7 +1781,7 @@
 105C:\Users\Praveen\Desktop\natour\node_modules\@parcel\transformer-svg\node_modules\semver\functions\neq.js133477414130343248 0
 98C:\Users\Praveen\Desktop\natour\node_modules\jsdom\lib\jsdom\living\generated\ScrollRestoration.js133477251138404003 0
 106C:\Users\Praveen\Desktop\natour\node_modules\regenerate-unicode-properties\Script_Extensions\Devanagari.js133477251104146202 0
-49C:\Users\Praveen\Desktop\natour\node_modules\@swc133483287323772073 1
+49C:\Users\Praveen\Desktop\natour\node_modules\@swc133485069226927538 1
 68C:\Users\Praveen\Desktop\natour\node_modules\rxjs\util\identity.d.ts133461405765932452 0
 81C:\Users\Praveen\Desktop\natour\node_modules\googleapis\build\src\apis\beyondcorp133476510772758413 1
 53C:\Users\Praveen\Desktop\natour\node_modules\inherits133482396966452766 1
@@ -13122,7 +13122,7 @@
 78C:\Users\Praveen\Desktop\natour\node_modules\path-browserify\test\test-path.js133477250832733839 0
 95C:\Users\Praveen\Desktop\natour\node_modules\rxjs\_esm2015\internal\operators\defaultIfEmpty.js133461405577010044 0
 106C:\Users\Praveen\Desktop\natour\node_modules\eslint-config-esnext\node_modules\type-fest\source\basic.d.ts133461405332214994 0
-70C:\Users\Praveen\Desktop\natour\controllers\authentcationController.js133483210930368256 0
+70C:\Users\Praveen\Desktop\natour\controllers\authentcationController.js133485082036414929 0
 90C:\Users\Praveen\Desktop\natour\node_modules\rxjs\_esm2015\internal\operators\delayWhen.js133461405582379747 0
 68C:\Users\Praveen\Desktop\natour\node_modules\lodash\_listCacheHas.js133461405584209846 0
 94C:\Users\Praveen\Desktop\natour\node_modules\rxjs\_esm2015\internal\operators\delayWhen.js.map133461405707479852 0

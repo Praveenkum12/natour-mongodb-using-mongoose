@@ -15,6 +15,11 @@ exports.getCheckoutSession = catchAsync(async function (req, res, next) {
   // 1) Get the currently booked tour
   const tour = await Tour.findById(req.params.tourId);
   // 2) Create checkout session
+  console.log(
+    `${req.protocol}://${req.get('host')}/?tour=${req.params.tourId}&user=${
+      req.user.id
+    }&price=${tour.price}`
+  );
   const product = await stripe.products.create({
     name: `${tour.name} Tour`,
     description: tour.summary,
@@ -34,7 +39,7 @@ exports.getCheckoutSession = catchAsync(async function (req, res, next) {
     }&user=${req.user.id}&price=${tour.price}`,
     cancel_url: `${req.protocol}://${req.get('host')}/tour/${tour.id}`,
     customer_email: req.user.email,
-    client_reference_id: req.params.tourID,
+    client_reference_id: req.params.tourId,
     mode: 'payment',
     line_items: [
       {
@@ -43,12 +48,13 @@ exports.getCheckoutSession = catchAsync(async function (req, res, next) {
       },
     ],
   });
+  console.log(session);
 
   // To test successful payments use: 4242 4242 4242 4242
   // To test declined payments use: 4000 0000 0000 0002
   // To test authorised payments (EU) use:  4000 0000 0000 3220
 
-  // 3) Create sessionj as response
+  // 3) Create session as response
   res.status(200).json({
     status: 'success',
     session,
@@ -58,11 +64,12 @@ exports.getCheckoutSession = catchAsync(async function (req, res, next) {
 exports.createBookingCheckout = catchAsync(async function (req, res, next) {
   // this is only temp, bcause its unsecure: everyone can make booking without paying
   const { tour, user, price } = req.query;
-
+  console.log(tour, user, price);
   if (!tour && !user && !price) return next();
 
-  await Booking.create({ tour, user, price });
-  res.redirect(req.originalUrl.split('?')[0]);
+  const doc = await Booking.create({ tour, user, price });
+  console.log(doc);
+  // res.redirect(req.originalUrl.split('?')[0]);
 });
 
 exports.createBooking = createOne(Booking);

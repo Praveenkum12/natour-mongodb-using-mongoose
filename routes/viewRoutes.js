@@ -15,7 +15,7 @@ const { createBookingCheckout } = require('../controllers/bookingController');
 
 const router = express.Router();
 
-router.get('/', createBookingCheckout, isloggedIn, getOverview);
+router.get('/', isloggedIn, getOverview);
 router.get('/tour/:tourId', isloggedIn, getTour);
 router.get('/login', isloggedIn, getLoginForm);
 router.get('/sign-up', getSignUpForm);

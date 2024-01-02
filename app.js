@@ -8,6 +8,7 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
 const compression = require('compression');
+const cors = require('cors');
 
 const AppError = require('./utils/appError');
 const globalErrorhandler = require('./controllers/errorController');
@@ -19,12 +20,21 @@ const viewRouter = require('./routes/viewRoutes');
 
 const app = express();
 
-// app.enable('trust proxy');
-
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 // 1) GOBAL MIDDLEWARE
+// Implement CORS
+app.use(cors());
+// Access-Control-Allow-Origin
+// app.use(
+//   cors({
+//     origin: 'https://www.natours.com',
+//   })
+// );
+app.options('*', cors());
+// app.options('/api/v1/tours/:id', cors());
+
 // Serving static files
 // app.use(express.static(`${__dirname}/public`));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -57,7 +67,7 @@ app.use(
           // 'https://*.tiles.mapbox.com',
           // 'https://api.mapbox.com',
           // 'https://events.mapbox.com',
-          // 'https://m.stripe.network',
+          'https://m.stripe.network',
         ],
         childSrc: ["'self'", 'blob:'],
         imgSrc: ["'self'", 'data:', 'blob:'],
@@ -67,7 +77,7 @@ app.use(
           "'unsafe-inline'",
           'data:',
           'blob:',
-          // 'https://*.stripe.com',
+          'https://*.stripe.com',
           // 'https://*.mapbox.com',
           // 'https://*.cloudflare.com/',
           'https://bundle.js:*',

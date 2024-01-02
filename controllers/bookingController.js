@@ -15,11 +15,6 @@ exports.getCheckoutSession = catchAsync(async function (req, res, next) {
   // 1) Get the currently booked tour
   const tour = await Tour.findById(req.params.tourId);
   // 2) Create checkout session
-  console.log(
-    `${req.protocol}://${req.get('host')}/?tour=${req.params.tourId}&user=${
-      req.user.id
-    }&price=${tour.price}`
-  );
   const product = await stripe.products.create({
     name: `${tour.name} Tour`,
     description: tour.summary,
@@ -37,7 +32,7 @@ exports.getCheckoutSession = catchAsync(async function (req, res, next) {
     success_url: `${req.protocol}://${req.get('host')}/?tour=${
       req.params.tourId
     }&user=${req.user.id}&price=${tour.price}`,
-    cancel_url: `${req.protocol}://${req.get('host')}/tour/${tour.id}`,
+    cancel_url: `${req.protocol}://${req.get('host')}/tours/${tour.id}`,
     customer_email: req.user.email,
     client_reference_id: req.params.tourId,
     mode: 'payment',
@@ -64,12 +59,11 @@ exports.getCheckoutSession = catchAsync(async function (req, res, next) {
 exports.createBookingCheckout = catchAsync(async function (req, res, next) {
   // this is only temp, bcause its unsecure: everyone can make booking without paying
   const { tour, user, price } = req.query;
-  console.log(tour, user, price);
   if (!tour && !user && !price) return next();
 
   const doc = await Booking.create({ tour, user, price });
   console.log(doc);
-  // res.redirect(req.originalUrl.split('?')[0]);
+  res.redirect(req.originalUrl.split('?')[0]);
 });
 
 exports.createBooking = createOne(Booking);

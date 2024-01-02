@@ -5124,7 +5124,7 @@ const bookTour = async (tourId)=>{
             sessionId: session.data.session.id
         });
     } catch (err) {
-        console.log(err);
+        console.log("Error ", err);
         (0, _alert.showAlert)("error", err);
     }
 };
@@ -5188,7 +5188,7 @@ require("889779cb2fdd24f4");
 require("a3f453df0c362f3a");
 require("5149e6c04d66148b");
 
-},{"20d5adc6d0f9d0ec":"4wGwh","5393e06e6601db86":"kZ75w","b5ec37d53a8038a3":"hFLym","3b1c6638424f7cc9":"ba400","a94df941b08ed34b":"4AgIQ","27f1c6610972fa8f":"Xap5l","736edc9ff1c820fc":"jOmbs","e913642ec1cdbfc0":"hKWqE","bbc44ee8d910fc67":"4GrDB","78c9cbd887a23ab3":"hgDBl","6280d07c0d3b0e0d":"gFOiW","889779cb2fdd24f4":"7vSrz","a3f453df0c362f3a":"kH3bz","5149e6c04d66148b":"lGn3n"}],"4wGwh":[function(require,module,exports) {
+},{"20d5adc6d0f9d0ec":"4wGwh","5393e06e6601db86":"kZ75w","b5ec37d53a8038a3":"hFLym","3b1c6638424f7cc9":"ba400","a94df941b08ed34b":"4AgIQ","27f1c6610972fa8f":"Xap5l","736edc9ff1c820fc":"jOmbs","e913642ec1cdbfc0":"hKWqE","bbc44ee8d910fc67":"4GrDB","78c9cbd887a23ab3":"hgDBl","6280d07c0d3b0e0d":"gFOiW","889779cb2fdd24f4":"7vSrz","a3f453df0c362f3a":"kH3bz","5149e6c04d66148b":"dXNgZ"}],"4wGwh":[function(require,module,exports) {
 require("3da956e7429fddca");
 require("a1daecb51c726868");
 require("90b93ac0707ed119");
@@ -11332,7 +11332,7 @@ for(var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++)
     }
 }
 
-},{"5fe806b1e7f583c0":"1xhrt","97646e462e98667a":"98CC0","b2fc1f92ab5348f1":"9vAu7","ff5bc3a0e23bebd1":"8xCse","eb90d3b2d8d1b5b":"ddpVq","f4eb5e7788345336":"dITQr","ba3590d81d843dbb":"eaoKZ"}],"lGn3n":[function(require,module,exports) {
+},{"5fe806b1e7f583c0":"1xhrt","97646e462e98667a":"98CC0","b2fc1f92ab5348f1":"9vAu7","ff5bc3a0e23bebd1":"8xCse","eb90d3b2d8d1b5b":"ddpVq","f4eb5e7788345336":"dITQr","ba3590d81d843dbb":"eaoKZ"}],"dXNgZ":[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *

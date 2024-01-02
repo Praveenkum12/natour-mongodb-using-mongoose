@@ -4,6 +4,7 @@ import { logout } from './logout';
 import { updateSetting } from './updateSettings';
 import { bookTour } from './stripe';
 import { signup } from './signup';
+import { showAlert } from './alert';
 
 document.querySelector('.form-login')?.addEventListener('submit', function (e) {
   e.preventDefault();
@@ -60,3 +61,6 @@ document.getElementById('book-tour')?.addEventListener('click', function (e) {
   const { tourId } = e.target.dataset;
   bookTour(tourId);
 });
+
+const alertMessage = document.querySelector('body').dataset.alert;
+if (alert) showAlert('sucsess', alertMessage, 20);
